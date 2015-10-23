@@ -21,3 +21,7 @@ fi
 chown -R www-data: "$LOG_DIR/nginx"
 
 /bin/bash
+
+# configure couchdb with cors for pouch support
+npm install -g add-cors-to-couchdb
+add-cors-to-couchdb

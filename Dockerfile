@@ -8,13 +8,17 @@ RUN \
     apt-get update && \
     apt-get -y upgrade && \
     apt-get install -y build-essential && \
-    apt-get install -y nginx && \
     apt-get install -y software-properties-common && \
     apt-get install -y byobu curl git htop man unzip vim wget && \
+    apt-get install -y nginx && \
+    apt-get install -y nodejs && \
+    apt-get install -y npm && \
+    apt-get install -y couchdb && \
     rm -rf /var/lib/apt/lists/*
 
 # Create webroot
 RUN mkdir /srv/www
+run mkdir /usr/bin/env
 ADD ./index.html /srv/www/index.html
 
 # Replace the stock config with a nicer one.
