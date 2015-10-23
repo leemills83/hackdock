@@ -6,7 +6,7 @@ set -e
 
 DATA_DIR=/srv/www
 LOG_DIR=/var/log
- 
+
 # Check if the data directory does not exist.
 if [ ! -d "$LOG_DIR/nginx" ]; then
   mkdir -p "$LOG_DIR/nginx"
@@ -20,8 +20,7 @@ fi
 
 chown -R www-data: "$LOG_DIR/nginx"
 
-/bin/bash
-
 # configure couchdb with cors for pouch support
-npm install -g add-cors-to-couchdb
-add-cors-to-couchdb
+ ln -s /usr/bin/nodejs /usr/bin/node
+ npm install -g add-cors-to-couchdb && \
+ add-cors-to-couchdb
