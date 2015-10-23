@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker build -t hackman/nodejs-server nodejs/
-docker build -t hackman/couchdb couchdb/
+docker build -t leemills/nodejs-server nodejs/
+docker build -t leemills/couchdb couchdb/
 echo "All built"
