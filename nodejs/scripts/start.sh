@@ -19,5 +19,3 @@ else
 fi
 
 chown -R www-data: "$LOG_DIR/nginx"
-
-nginx", "-g", "daemon off;"
