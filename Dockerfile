@@ -16,9 +16,10 @@ RUN \
     apt-get install -y couchdb && \
     rm -rf /var/lib/apt/lists/*
 
+
 # Create webroot
 RUN mkdir /srv/www
-ADD ./index.html /srv/www/index.html
+COPY ./index.html /srv/www/index.html
 
 # Replace the stock config with a nicer one.
 RUN rm -rf /etc/nginx
@@ -47,5 +48,8 @@ RUN chmod +x /scripts/start.sh
 # Expose our web root and log directories log.
 VOLUME ["/vagrant", "/srv/www", "/var/log", "/var/run"]
 
+COPY ./scripts/start.sh /usr/bin/local/
+RUN chmod +x /usr/bin/local/start.sh
+
 # Kicking in
-CMD ["/scripts/start.sh"]
+CMD ["/usr/bin/local/start.sh"]
