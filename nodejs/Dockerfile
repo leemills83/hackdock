@@ -13,7 +13,6 @@ RUN \
     apt-get install -y nginx && \
     apt-get install -y nodejs && \
     apt-get install -y npm && \
-    apt-get install -y couchdb && \
     rm -rf /var/lib/apt/lists/*
 
 

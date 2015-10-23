@@ -20,7 +20,4 @@ fi
 
 chown -R www-data: "$LOG_DIR/nginx"
 
-# configure couchdb with cors for pouch support
- ln -s /usr/bin/nodejs /usr/bin/node
- npm install -g add-cors-to-couchdb && \
- add-cors-to-couchdb
+nginx", "-g", "daemon off;"
