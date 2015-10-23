@@ -18,7 +18,6 @@ RUN \
 
 # Create webroot
 RUN mkdir /srv/www
-run mkdir /usr/bin/env
 ADD ./index.html /srv/www/index.html
 
 # Replace the stock config with a nicer one.
