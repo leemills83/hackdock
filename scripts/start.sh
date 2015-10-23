@@ -18,13 +18,6 @@ else
   source /scripts/normal_run.sh
 fi
 
-chown -R nginx:nginx "$LOG_DIR/nginx"
+chown -R www-data: "$LOG_DIR/nginx"
 
-echo "Starting Syslog-ng..."
-syslog-ng --no-caps
-
-echo "Starting SSHd..."
-/usr/sbin/sshd
-
-echo "Starting Nginx..."
-/usr/sbin/nginx
+/bin/bash
